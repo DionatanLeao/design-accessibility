@@ -9,10 +9,21 @@ export class YesNoButtonGroupComponent implements OnInit {
 
   @Input() public value: string = null;
   @Input() public label = '';
+  public options = YESNoButtonGroupOptions;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  public activate(value: string) {
+    this.value = value
+  }
+
+}
+
+
+enum YESNoButtonGroupOptions {
+    YES = 'yes',
+    NO = 'no'
 }
