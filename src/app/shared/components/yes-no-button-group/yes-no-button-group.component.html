@@ -11,6 +11,7 @@
 
     <button
         appKmItem
+        (focused)="activate(options.YES)"
         role="radio" 
         [attr.tabindex]="value === options.YES || value === null ? 0 : -1"
         [attr.aria-checked]="value === options.YES"
@@ -23,6 +24,7 @@
     
     <button
         appKmItem
+        (focused)="activate(options.NO)"
         role="radio"
         [attr.tabindex]="value === options.NO || value === null ? 0 : -1"
         [attr.aria-checked]="value === options.NO"
