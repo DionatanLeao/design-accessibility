@@ -10,6 +10,7 @@
 
     <button
         role="radio" 
+        [attr.tabindex]="value === options.YES || value === null ? 0 : -1"
         [attr.aria-checked]="value === options.YES"
         type="button" 
         class="button button-yes" 
@@ -17,9 +18,10 @@
         (click)="activate(options.YES)">
         Yes
     </button>
-
+    
     <button 
         role="radio"
+        [attr.tabindex]="value === options.NO || value === null ? 0 : -1"
         [attr.aria-checked]="value === options.NO"
         type="button" 
         class="button button-no" 
